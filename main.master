@@ -1,0 +1,235 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="main.master.cs" Inherits="main" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0e2d67">
+    <script>document.documentElement.className += ' ap-js';</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18109288700"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18109288700');
+</script>
+
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TMV99KDH');</script>
+<!-- End Google Tag Manager -->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- ================= HEADER ================= -->
+        <div class="ap-topbar">
+            <div class="container ap-topbar-inner">
+                <ul class="ap-topbar-contact">
+                    <li><a href="tel:09217532501"><i class="fa fa-phone"></i> Call : +91 9217532501</a></li>
+                    <li class="ap-hide-sm"><a href="mailto:activepackersmoversindia@gmail.com"><i class="fa fa-envelope"></i> activepackersmoversindia@gmail.com</a></li>
+                    <li class="ap-hide-md"><i class="fa fa-map-marker"></i> Plot No. 15/3, Second Floor, Sector 26, Chandigarh &ndash; 160019</li>
+                </ul>
+                <div class="ap-topbar-right">
+                    <span class="ap-live"><span class="ap-live-dot"></span> 24x7 Support</span>
+                    <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fa fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <header class="ap-header" id="apHeader">
+            <div class="container ap-header-inner">
+                <a class="ap-logo" href="index.aspx"><img src="active-packers-logo.png" alt="Active Packers & Movers" /></a>
+
+                <nav class="ap-nav" aria-label="Main">
+                    <a href="index.aspx" class="ap-nav-link" data-page="index">Home</a>
+                    <a href="about.aspx" class="ap-nav-link" data-page="about">About Us</a>
+                    <div class="ap-has-mega">
+                        <button type="button" class="ap-nav-link ap-mega-toggle" aria-expanded="false">Services <i class="fa fa-angle-down"></i></button>
+                        <div class="ap-mega">
+                            <a href="packing-and-moving.aspx"><span class="ap-mega-ic"><i class="fa fa-archive"></i></span><span><b>Packing &amp; Moving</b></span></a>
+                            <a href="loading-and-unloading.aspx"><span class="ap-mega-ic"><i class="fa fa-cubes"></i></span><span><b>Loading &amp; Unloading</b></span></a>
+                            <a href="household-goods-shifting.aspx"><span class="ap-mega-ic"><i class="fa fa-home"></i></span><span><b>Household Goods Shifting</b></span></a>
+                            <a href="transportaton-insurance.aspx"><span class="ap-mega-ic"><i class="fa fa-shield"></i></span><span><b>Transportation Insurance</b></span></a>
+                            <a href="home-furniture-shifting.aspx"><span class="ap-mega-ic"><i class="fa fa-bed"></i></span><span><b>Home Furniture Shifting</b></span></a>
+                            <a href="car-bike-transportation.aspx"><span class="ap-mega-ic"><i class="fa fa-car"></i></span><span><b>Car/Bike Transportation</b></span></a>
+                        </div>
+                    </div>
+                    <a href="gallery.aspx" class="ap-nav-link" data-page="gallery">Gallery</a>
+                    <a href="branches.aspx" class="ap-nav-link" data-page="branches">Our Networks</a>
+                    <a href="contact.aspx" class="ap-nav-link" data-page="contact">Contact Us</a>
+                </nav>
+
+                <div class="ap-header-cta">
+                    <a href="contact.aspx" class="ap-btn ap-btn-orange">Get Quote <i class="fa fa-arrow-right"></i></a>
+                </div>
+
+                <button type="button" class="ap-burger" id="apBurger" aria-label="Open menu" aria-controls="apDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </header>
+
+        <!-- Mobile drawer -->
+        <div class="ap-drawer-backdrop" id="apBackdrop"></div>
+        <aside class="ap-drawer" id="apDrawer" aria-label="Menu">
+            <div class="ap-drawer-head">
+                <img src="active-packers-logo.png" alt="Active Packers & Movers" />
+                <button type="button" class="ap-drawer-close" id="apDrawerClose" aria-label="Close menu"><i class="fa fa-times"></i></button>
+            </div>
+            <nav class="ap-drawer-nav">
+                <a href="index.aspx">Home</a>
+                <a href="about.aspx">About Us</a>
+                <details>
+                    <summary>Services <i class="fa fa-angle-down"></i></summary>
+                    <a href="packing-and-moving.aspx">Packing &amp; Moving</a>
+                    <a href="loading-and-unloading.aspx">Loading &amp; Unloading</a>
+                    <a href="household-goods-shifting.aspx">Household Goods Shifting</a>
+                    <a href="transportaton-insurance.aspx">Transportation Insurance</a>
+                    <a href="home-furniture-shifting.aspx">Home Furniture Shifting</a>
+                    <a href="car-bike-transportation.aspx">Car/Bike Transportation</a>
+                </details>
+                <a href="gallery.aspx">Gallery</a>
+                <a href="branches.aspx">Our Networks</a>
+                <a href="contact.aspx">Contact Us</a>
+            </nav>
+            <div class="ap-drawer-foot">
+                <a href="tel:09217532501" class="ap-btn ap-btn-orange"><i class="fa fa-phone"></i> Call Us</a>
+                <a href="https://api.whatsapp.com/send?phone=919217532501&text=Hi" class="ap-btn ap-btn-green"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+                <p><i class="fa fa-map-marker"></i> Plot No. 15/3, Second Floor, Sector 26, Chandigarh &ndash; 160019</p>
+            </div>
+        </aside>
+        <!-- ================= END HEADER ================= -->
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="ap-footer">
+            <div class="container">
+                <!-- 24x7 Support / Visit Us (original subscribe section content) -->
+                <div class="ap-footer-cta ap-footer-support" data-reveal>
+                    <div class="ap-support-col">
+                        <h3 class="ap-support-title">24x7 Support</h3>
+                        <ul>
+                            <li><i class="fa fa-phone"></i>&nbsp;Phone: <a href="tel:09217532501">+91 9217532501 </a></li>
+                            <li><i class="fa fa-envelope"></i>&nbsp;Email: <a href="mailto:activepackersmoversindia@gmail.com">activepackersmoversindia@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="ap-support-col">
+                        <h3 class="ap-support-title">Visit Us</h3>
+                        <div><strong><i class="fa fa-home"></i>&nbsp;Office Address:</strong> Plot No. 15/3, Second Floor, Sector 26, Chandigarh &ndash; 160019</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ap-road" aria-hidden="true"><span class="ap-road-truck"><i class="fa fa-truck"></i></span></div>
+
+            <div class="container">
+                <div class="ap-footer-grid">
+                    <div class="ap-footer-brand">
+                        <a href="../" class="ap-footer-logo"><img src="active-packers-logo.png" alt="" /></a>
+                        <p>Active Packers &amp; Movers &ndash; Chandigarh is a sole proprietorship Company that was perceived in 2009 at Chandigarh, with a maxim of giving all around oversaw benefits in the most ideal way.</p>
+                        <div class="ap-social">
+                            <a href="#" aria-label="Facebook"><i class="fa fa-facebook-square"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" aria-label="Google"><i class="fa fa-google"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin-square"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="packing-and-moving.aspx">Packing &amp; Moving</a></li>
+                            <li><a href="loading-and-unloading.aspx">Loading &amp; Unloading</a></li>
+                            <li><a href="household-goods-shifting.aspx">Household Goods Shifting</a></li>
+                            <li><a href="transportaton-insurance.aspx">Transportation Insurance</a></li>
+                            <li><a href="home-furniture-shifting.aspx">Home Furniture Shifting</a></li>
+                            <li><a href="car-bike-transportation.aspx">Car/Bike Transportation</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li><a href="../">Visit Homepage</a></li>
+                            <li><a href="branches.aspx">Our Networks</a></li>
+                            <li><a href="gallery.aspx">Our Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ap-wordmark" aria-hidden="true">ACTIVE</div>
+
+            <div class="ap-footer-bottom">
+                <div class="container ap-footer-bottom-inner">
+                    <p>&copy; Copyright <span id="year">2026</span> Active Packers &amp; Movers, All Rights Reserved</p>
+                    <ul class="ap-footer-links">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="about.aspx">About Us</a></li>
+                        <li><a href="terms-and-conditions.aspx">Terms &amp; Conditions</a></li>
+                        <li><a href="privacy-policy.aspx">Privacy Policy</a></li>
+                        <li><a href="contact.aspx">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- ================= END FOOTER ================= -->
+
+        <!-- Mobile action dock -->
+        <div class="ap-dock">
+            <a href="tel:09217532501"><i class="fa fa-phone"></i><span>Call Us</span></a>
+            <a href="https://api.whatsapp.com/send?phone=919217532501&text=Hi" class="ap-dock-wa"><i class="fa fa-whatsapp"></i><span>WhatsApp</span></a>
+            <a href="contact.aspx" class="ap-dock-quote"><i class="fa fa-file-text-o"></i><span>Get Quote</span></a>
+        </div>
+        <!-- Desktop floating WhatsApp -->
+        <a class="ap-fab-wa" href="https://api.whatsapp.com/send?phone=919217532501&text=Hi" aria-label="Chat on WhatsApp"><i class="fa fa-whatsapp"></i></a>
+
+        <!-- jQuery Min JS -->
+        <script src="js/jquery-min.js"></script>
+        <!-- Popper Min JS -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap Min JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Owl Carousel Min JS -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Plugins JS -->
+        <script src="js/plugins.js"></script>
+        <!-- slick JS -->
+        <script src="js/slick.min.js"></script>
+        <!-- Magnific Popup JS -->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <!-- Isotope JS -->
+        <script src="js/isotope.pkgd.min.js"></script>
+        <!-- Fancybox JS -->
+        <script src="js/jquery.fancybox.js"></script>
+        <!-- Mean Menu JS -->
+        <script src="js/jquery.meanmenu.js"></script>
+        <!-- Custom JS -->
+        <script src="js/custom.js"></script>
+        <!-- Site JS (header, drawer, animations) -->
+        <script src="js/site.js"></script>
+
+    </form>
+</body>
+</html>
